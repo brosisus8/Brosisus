@@ -1,0 +1,864 @@
+/* Styles CSS intégrés */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/************************* navbar **************************/
+
+.navbar {
+    background-color: transparent !important;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    align-self: flex-end !important;
+    margin: 0 !important;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.nav-item a {
+    font-size: 20px;
+    color: #EBF4F6 ;
+    font-family: "Overpass", sans-serif !important;
+}
+
+.nav-item a:hover {
+    font-size: 20px;
+    color: #B17457 ;
+    font-family: "Overpass", sans-serif !important;
+}
+
+.dropdown-item {
+    color: #000000 !important;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navLogo {
+    width: 80px;
+    height: 80px;
+}
+
+.navLogoText {
+    color: #B17457 !important; 
+    font-family: "Overpass", sans-serif !important;
+    font-weight: bolder;
+    font-size: 28px;
+    margin: 0;
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navbar-toggler {
+    margin: 0;
+}
+ /**************************************************************/
+
+ body {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Add this */
+}
+
+/* Add these new rules */
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Add a dark overlay to improve content visibility */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.575);
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #04110b;
+    color: EBF4F6;
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 100px;
+    position: relative;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#home h3 {
+    font-family: "Overpass", sans-serif;
+    font-size: 3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #EBF4F6;
+}
+
+#home h1 {
+    font-family: "Overpass", sans-serif;
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B17457;
+    background-clip: text;
+    letter-spacing: 15px;
+}
+
+#home p {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    color: #EBF4F6;
+}
+
+.button {
+    color: #B17457;
+    border-color: #B17457;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: #B17457;
+    color: #EBF4F6;
+    border-color: #B17457;
+}
+
+.buttonExplore {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    margin-top: 20px;
+}
+
+.buttonExplore:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out; 
+}
+
+.exploreBtnP {
+    font-family: "Overpass", sans-serif;
+    font-size: 30px !important;
+    margin-bottom: 10px !important;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#message {
+    padding: 20px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1;
+    width: 100%;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px
+}
+
+#proprietaire-section {
+    padding: 20px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1;
+    width: 100%;
+}
+
+.property-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#proprietaire-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+#proprietaire-form input {
+    align-self: flex-start;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#proprietaire-form label {
+    color: white;
+    font-weight: bold;
+    font-family: 'overpass', sans-serif;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+
+
+#locataire-section {
+    padding: 20px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1;
+    width: 100%;
+}
+
+#locataire-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+#locataire-form select {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#locataire-form input {
+    align-self: flex-start;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.tenant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.messageHeading {
+    font-family: "Overpass", sans-serif;
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #B17457;
+}
+
+.red-text {
+    color: rgb(255, 255, 255);
+    font-family: "Overpass", sans-serif;
+    font-size: 24px;
+}
+
+.message-info {
+    text-align: center;
+    color: rgb(130, 95, 227);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    background-color: #000000;
+    color: white;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#locataire-form label {
+    color: white;
+    font-weight: bold;
+    font-family: 'overpass', sans-serif;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+#messagerie-form label {
+    color: white;
+    font-weight: bold;
+    font-family: 'overpass', sans-serif;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+.buttonMessage {
+    background-color: #B17457;
+    color: white;
+    border-color: #B17457;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.buttonMessage:hover {
+    background-color: #B17457;
+    color: white;
+    border-color: #B17457;
+}
+
+/* Styles pour la messagerie */
+#messagerie-section {
+    padding: 20px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100vh;
+    min-height: 100vh;
+    flex: 1;
+    width: 100%;
+}
+
+#messagerie-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    main {
+        padding: 15px;
+    }
+}
+.hidden {
+    display: none;
+}
+#payment-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+#payment-section ul li {
+    margin: 5px 0;
+}
+
+.cardSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background-color: white;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-details {
+    padding: 15px;
+}
+
+.property-details h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.property-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+#propertyList {
+    margin: 20px 0;
+}
+
+.messageCardSection {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.message-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-direction: 'column';
+    margin-bottom: 15px;
+}
+
+.message-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.time {
+    margin-bottom: 10px;
+}
+
+.messageContent {
+    font-family: 'overpass', sans-serif;
+    color: #ffffff;
+    background-color: #B17457;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.message-responses {
+    flex: 1;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+}
+
+.no-response {
+    color: #666;
+    font-style: italic;
+}
+
+.response {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.requestCardSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tenant-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tenant-image {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+}
+
+.tenant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tenant-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.tenant-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.tenant-info p {
+    margin: 8px 0;
+}
+
+.response-input {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.response-text {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.response-button {
+    background-color: #B17457;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.response-button:hover {
+    background-color: #B17457;
+}
+
+
+#searchForm {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#searchForm label {
+    font-family: 'overpass', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    width: 60%;
+}
+
+.searchButton {
+    background-color: #B17457;
+    border-color: #B17457;
+    border-radius: 50%;
+}
+
+.searchButton:hover {
+    background-color: #B17457;
+    border-color: #B17457;
+}
+
+.SearchProperty {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.propH {
+    font-family: 'overpass', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+    color: white;
+}
+
+.buttonDiv{
+    margin-bottom: 10px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+}
+
+.formDiv {
+    display: flex; 
+    flex-direction: 
+    row; gap: 40px; 
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .messageCardSection {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .messageHeading {
+        font-family: "Overpass", sans-serif;
+        font-size: 2em;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #B17457;
+    }
+
+    .tenant-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .tenant-image {
+        width: 100%;
+        min-width: 200px;
+        height: 200px;
+    }
+
+    .buttonDiv{
+        margin-bottom: 10px; 
+        width: 100%; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    #home h3 {
+        font-family: "Overpass", sans-serif;
+        font-size: 2.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #EBF4F6;
+    }
+    
+    #home h1 {
+        font-family: "Overpass", sans-serif;
+        font-size: 3em;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #B17457;
+        background-clip: text;
+        letter-spacing: 15px;
+    }
+    
+    #home p {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-family: "Overpass", sans-serif;
+        color: #EBF4F6;
+    }
+
+    #searchForm {
+        background-color: white;
+        padding: 3px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .searchButton {
+        background-color: #B17457;
+        border-color: #B17457;
+        border-radius: 8px;
+    }
+
+    .formDiv {
+        display: flex; 
+        flex-direction: column; 
+        gap: 40px; 
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    
+    #home h3 {
+        font-family: "Overpass", sans-serif;
+        font-size: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #EBF4F6;
+        margin-top: 150px;
+    }
+    
+    #home h1 {
+        font-family: "Overpass", sans-serif;
+        font-size: 2.5em;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #B17457;
+        background-clip: text;
+        letter-spacing: 15px;
+    }
+    
+    #home p {
+        font-size: 1em;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-family: "Overpass", sans-serif;
+        color: #EBF4F6;
+    }
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+        z-index: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #searchForm {
+        background-color: white;
+        padding: 3px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+    #searchForm label {
+        font-family: 'overpass', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: #666;
+        width: 60%;
+    }
+    
+    .searchButton {
+        background-color: #B17457;
+        border-color: #B17457;
+        border-radius: 8px;
+    }
+    
+    .searchButton:hover {
+        background-color: #B17457;
+        border-color: #B17457;
+    }
+    
+    .SearchProperty {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .propH {
+        font-family: 'overpass', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        align-self: center;
+        color: white;
+    }
+    
+    .buttonDiv{
+        margin-bottom: 10px; 
+        width: 100%; 
+        display: flex; 
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
