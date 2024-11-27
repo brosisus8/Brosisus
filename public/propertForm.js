@@ -1,6 +1,7 @@
 document.getElementById('proprietaire-form').addEventListener('submit', async (e) => {
     alert('Form submitted');
     e.preventDefault();
+
     const formData = new FormData();
     
     formData.append('owner', document.getElementById('name-proprietaire').value);
@@ -9,7 +10,10 @@ document.getElementById('proprietaire-form').addEventListener('submit', async (e
     formData.append('rentPrice', document.getElementById('price-rent').value);
     formData.append('roomSize', document.getElementById('room-size-prop').value);
     formData.append('features', document.getElementById('features').value);
-    formData.append('photo', document.getElementById('photo').files[0]);
+
+    // Append the two images
+    formData.append('photo1', document.getElementById('photo1').files[0]);
+    formData.append('photo2', document.getElementById('photo2').files[0]);
 
     try {
         const response = await fetch('/api/property', {

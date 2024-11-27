@@ -1,8 +1,11 @@
 document.getElementById('messagerie-form').addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    const userKey = localStorage.getItem('userkey');
     
     const messageData = {
-        content: document.getElementById('message').value
+        content: document.getElementById('message').value,
+        senderId: userKey,
     };
 
     try {

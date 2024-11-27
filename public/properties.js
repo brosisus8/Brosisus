@@ -24,16 +24,37 @@ function createPropertyCard(property) {
     card.className = 'property-card';
     
     card.innerHTML = `
-        <img src="${property.photo}" alt="Property Image" class="property-image">
-        <div class="property-details">
-            <h3>${property.address}</h3>
-            <p>Owner: ${property.owner}</p>
-            <p>Contact: ${property.contact}</p>
-            <p>Rent: $${property.rentPrice}</p>
-            <p>Size: ${property.roomSize} m²</p>
-            <p>Features: ${property.features.join(', ')}</p>
+    <div id="propertyCarousel" class="carousel slide" >
+        <div class="carousel-inner">
+            <!-- First image (active by default) -->
+            <div class="carousel-item active">
+                <img src="${property.photo}" class="d-block w-100" alt="Property Image 1">
+            </div>
+            <!-- Second image -->
+            <div class="carousel-item">
+                <img src="${property.photo2}" class="d-block w-100" alt="Property Image 2">
+            </div>
         </div>
-    `;
+        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="property-details">
+        <h3>${property.address}</h3>
+        <p>Owner: ${property.owner}</p>
+        <p>Contact: ${property.contact}</p>
+        <p>Rent: ${property.rentPrice} €</p>
+        <p>Size: ${property.roomSize} m²</p>
+        <p>Features: ${property.features.join(', ')}</p>
+    </div>
+`;
+
     
     return card;
 }

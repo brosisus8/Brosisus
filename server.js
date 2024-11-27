@@ -3,8 +3,6 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
-const { LocalStorage } = require('node-localstorage');
-const localStorage = new LocalStorage('./scratch');
 const nodemailer = require('nodemailer');
 
 const app = express();
@@ -58,6 +56,7 @@ const Property = mongoose.model('Property', new mongoose.Schema({
     roomSize: Number,
     features: [String],
     photo: String,
+    photo2: String,
 }));
 
 const Message = mongoose.model('Message', new mongoose.Schema({
@@ -74,21 +73,13 @@ const Message = mongoose.model('Message', new mongoose.Schema({
 
  // Creates a storage directory
 
-function getUserKey() {
-    let userKey = localStorage.getItem('brosisus_user_key');
-    if (!userKey) {
-        userKey = 'user_' + Date.now() + Math.random().toString(36).substring(2);
-        localStorage.setItem('brosisus_user_key', userKey);
-        console.log('Generated new key:', userKey);
-    } else {
-        console.log('Using existing key:', userKey);
-    }
-    return userKey;
-}
-
 app.get('/', async (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.post('/', async (req, res) => {
     try {
-        const userKey = getUserKey();
+        const userKey = req.body.userKey;
         
         // Find or create user
         let user = await User.findOne({ userKey });
@@ -103,8 +94,7 @@ app.get('/', async (req, res) => {
         } else {
             console.log('Existing user found:', userKey);
         }
-        
-        res.sendFile(path.join(__dirname, 'index.html'));
+        res.status(200).send('User setup successful');
     } catch (error) {
         console.error('Error:', error);
         res.status(500).send('Error handling user setup');
@@ -173,7 +163,7 @@ app.get('/api/tenant', async (req, res) => {
     }
 });
 
-app.post('/api/property', upload.single('photo'), async (req, res) => {
+app.post('/api/property', upload.fields([{ name: 'photo1', maxCount: 1 }, { name: 'photo2', maxCount: 1 }]), async (req, res) => {
     const { owner, contact, address, rentPrice, roomSize, features } = req.body;
     const property = new Property({
         owner, 
@@ -181,12 +171,14 @@ app.post('/api/property', upload.single('photo'), async (req, res) => {
         address, 
         rentPrice, 
         roomSize, 
-        features, 
-        photo: req.file.path
+        features,
+        photo: req.files['photo1'] ? req.files['photo1'][0].path : null,
+        photo2: req.files['photo2'] ? req.files['photo2'][0].path : null
     });
     await property.save();
     res.send('Property published successfully.');
 });
+
 
 app.get('/api/properties', async (req, res) => {
     try {
@@ -219,8 +211,7 @@ app.post('/api/match', async (req, res) => {
 
 // Route to send a message
 app.post('/api/message', async (req, res) => {
-    const { content } = req.body;
-    const senderId = getUserKey();
+    const { content, senderId } = req.body;
 
     if (!content) {
         return res.status(400).send('Message content is required.');
@@ -254,7 +245,7 @@ app.get('/api/messages/:userId', async (req, res) => {
     const { userId } = req.params;
     console.log('Fetching messages for user:', userId);
 
-    const messages = await Message.find({}).sort({ timestamp: -1 });
+    const messages = await Message.find({ senderId: userId }).sort({ timestamp: -1 });
 
     console.log('Fetched messages:', messages);
 

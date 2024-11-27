@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
-          <img class="navLogo" src="/assets/logo.jpg" alt="image"/> 
+          <img class="navLogo" src="/assets/logo.png" alt="image"/> 
           <h3 class="navLogoText">Brosisus</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
               <a class="nav-link" href="/availableProperties">Available Properties</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/tenantRequest">Find House</a>
+              <a class="nav-link" href="/tenantRequests">Find House</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contact">Contact Us</a>
@@ -46,9 +46,9 @@
                 Anonymous Messaging
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/messages">Thoughts Pool</a></li>
+                <li><a class="dropdown-item" href="/messages">Your Messages</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/allMessages">Your Thoughts</a></li>
+                <li><a class="dropdown-item" href="/allMessages">All Messages</a></li>
               </ul>
             </li>
           </ul>
@@ -86,8 +86,12 @@
             <label for="features">Property Features (furnished, pets allowed, etc.)</label>
             <textarea id="features" rows="2"></textarea>
     
-            <label for="photo">Upload a photo of the property:</label>
-            <input type="file" id="photo" accept="image/*" required>
+            <label for="photo1">Upload first photo:</label>
+            <input type="file" id="photo1" accept="image/*" required>
+
+            <label for="photo2">Upload second photo:</label>
+            <input type="file" id="photo2" accept="image/*" required>
+
     
             <button class="btn btn-md btn-primary buttonMessage" type="submit">Submit</button>
         </form>

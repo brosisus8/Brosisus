@@ -10,7 +10,7 @@
 /************************* navbar **************************/
 
 .navbar {
-    background-color: transparent !important;
+    background-color: rgba(0, 0, 0, 0.726) !important;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -102,7 +102,7 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.575);
+    background: rgba(0, 0, 0, 0);
     z-index: -1;
 }
 
@@ -128,7 +128,7 @@ header {
 #home h3 {
     font-family: "Overpass", sans-serif;
     font-size: 3em;
-    margin-top: 10px;
+    margin-top: 60px;
     margin-bottom: 10px;
     color: #EBF4F6;
 }
@@ -242,6 +242,7 @@ textarea {
     margin-top: 100px
 }
 
+
 #proprietaire-section {
     padding: 20px;
     display: flex;
@@ -330,6 +331,7 @@ textarea {
     font-family: "Overpass", sans-serif;
     font-size: 3em;
     font-weight: 800;
+    margin-top: 50px;
     margin-bottom: 10px;
     text-transform: uppercase;
     color: #B17457;
@@ -506,6 +508,13 @@ footer {
     padding-right: 20px;
 }
 
+.nomessage-content {
+    flex: 1;
+    text-align: center;
+    padding: 60px;
+    background-color: white;
+}
+
 .time {
     margin-bottom: 10px;
 }
@@ -667,7 +676,90 @@ footer {
     width: 100%;
 }
 
+#sale {
+    background-color: white;
+    padding: 100px 20px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#sale h3 {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    font-family: 'overpass', sans-serif;
+    font-size: 40px;
+    width: 60%;
+    font-weight: bold;
+    color: #B17457;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+#sale p {
+    font-family: 'overpass', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+#sale small {
+    font-family: 'overpass', sans-serif;
+    font-size: 20px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.divcont {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: row; 
+    text-align: center;
+}
+
+
+/* Change the color of the next and previous icons */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgb(0, 0, 0); /* White color for the icons */
+}
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
 @media (max-width: 700px) {
+    .divcont {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column; 
+        text-align: center;
+    }
+    #sale h3 {
+        display: flex;
+        align-self: center;
+        text-align: center;
+        font-family: 'overpass', sans-serif;
+        font-size: 40px;
+        width: 100%;
+        font-weight: bold;
+        color: #B17457;
+        margin-bottom: 20px;
+    }
     .messageCardSection {
         padding: 20px;
         flex-direction: column;
@@ -763,7 +855,7 @@ footer {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     
     #home h3 {
         font-family: "Overpass", sans-serif;
