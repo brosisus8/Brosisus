@@ -165,6 +165,7 @@ app.get('/api/tenant', async (req, res) => {
 
 app.post('/api/property', upload.fields([{ name: 'photo1', maxCount: 1 }, { name: 'photo2', maxCount: 1 }]), async (req, res) => {
     const { owner, contact, address, rentPrice, roomSize, features } = req.body;
+    console.log(owner, contact, address, rentPrice, roomSize, features, req.files);
     const property = new Property({
         owner, 
         contact, 
