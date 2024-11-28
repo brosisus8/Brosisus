@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const {v2: cloudinary} = require('cloudinary');
 
 const app = express();
 app.use(express.json());
@@ -11,13 +12,16 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+cloudinary.config({ 
+    cloud_name: 'dmtw1zx5q', 
+    api_key: '821842996866867', 
+    api_secret: 'wiRbKTiGqz9H3-KlAhEAJISn1T8' // Click 'View API Keys' above to copy your API secret
+});
+
 const multer = require('multer');
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/')
-    },
     filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + file.originalname)
     }
@@ -25,8 +29,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Add static middleware for uploads
-app.use('/uploads', express.static('uploads'));
 
 // MongoDB Connection
 mongoose.connect("mongodb+srv://brosisus8:7suJwtCzdbecaWAH@brosisus.lrome.mongodb.net/Brosisus?retryWrites=true&w=majority&appName=Brosisus");
@@ -141,6 +143,14 @@ app.get('/contact', async (req, res) => {
 // Tenant routes
 app.post('/api/tenant', upload.single('proof'), async (req, res) => {
     const { name, contact, city, budgetMax, roomSizeMin, features } = req.body;
+    const one = await cloudinary.uploader.upload(req.file.path, (error, result) => {
+        if (error) {
+            console.error('Error uploading photo1:', error);
+            res.status(500).send('Error uploading photo1');
+        } else {
+            console.log('Photo1 uploaded successfully:', result);
+        }
+    });
     const tenant = new Tenant({
         name, 
         contact, 
@@ -148,7 +158,7 @@ app.post('/api/tenant', upload.single('proof'), async (req, res) => {
         budgetMax, 
         roomSizeMin, 
         features, 
-        proof: req.file.path
+        proof: one.secure_url
     });
     await tenant.save();
     res.send('Housing request submitted successfully.');
@@ -168,6 +178,25 @@ app.get('/api/tenant', async (req, res) => {
 app.post('/api/property', upload.fields([{ name: 'photo1', maxCount: 1 }, { name: 'photo2', maxCount: 1 }]), async (req, res) => {
     const { owner, contact, address, rentPrice, roomSize, features } = req.body;
     console.log(owner, contact, address, rentPrice, roomSize, features, req.files);
+    const one = await cloudinary.uploader.upload(req.files['photo1'][0].path, (error, result) => {
+        if (error) {
+            console.error('Error uploading photo1:', error);
+            res.status(500).send('Error uploading photo1');
+        } else {
+            console.log('Photo1 uploaded successfully:', result);
+        }
+    });
+    const two = await cloudinary.uploader.upload(req.files['photo2'][0].path, (error, result) => {
+        if (error) {
+            console.error('Error uploading photo2:', error);
+            res.status(500).send('Error uploading photo2');
+        } else {
+            console.log('Photo2 uploaded successfully:', result);
+        }
+    });
+
+    console.log('this is one:',one, 'this is two url' ,two.secure_url);
+
     const property = new Property({
         owner, 
         contact, 
@@ -175,8 +204,8 @@ app.post('/api/property', upload.fields([{ name: 'photo1', maxCount: 1 }, { name
         rentPrice, 
         roomSize, 
         features,
-        photo: req.files['photo1'] ? req.files['photo1'][0].path : null,
-        photo2: req.files['photo2'] ? req.files['photo2'][0].path : null
+        photo: one.secure_url,
+        photo2: two.secure_url
     });
     await property.save();
     res.send('Property published successfully.');

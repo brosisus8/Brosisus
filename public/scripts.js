@@ -15,7 +15,6 @@ async function getUserKey() {
         });
         if (response.ok){
             if (response.ok) {
-                fetchAndDisplayMessages();
                 alert('Welcome New User!');
             }
         }
