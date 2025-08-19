@@ -1,376 +1,337 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dadadu - Short Video Social Network App | Connect, Share, Play</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Dadadu is a revolutionary short-form video social network app where users connect through Love, Business, and Entertainment modes. Share 20-second videos, match with nearby users, earn Diamonds, and unlock exclusive features. Available on iOS and Android.">
-    <meta name="keywords" content="Dadadu, social network, short videos, video app, mobile app, social media, TikTok alternative, video sharing, social connection, brosisus, trending app, viral videos, mobile social network, video platform, entertainment app, business networking, dating app">
-    <meta name="author" content="Dadadu Team">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="en">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Dadadu - Revolutionary Short Video Social Network">
-    <meta property="og:description" content="Connect through Love, Business & Entertainment modes. Share 20-second videos, match with nearby users, earn Diamonds and badges. The next-gen social app.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://brosisus.com">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&h=630&auto=format&fit=crop">
-    <meta property="og:site_name" content="Dadadu">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dadadu - Revolutionary Short Video Social Network">
-    <meta name="twitter:description" content="Connect through Love, Business & Entertainment modes. Share videos, match nearby users, earn rewards.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&h=630&auto=format&fit=crop">
-    
-    <!-- Structured Data for Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Dadadu",
-      "alternateName": ["Brosisus", "Dadadu App"],
-      "description": "Revolutionary short-form video social network app with proximity-based matching and gamified rewards system",
-      "applicationCategory": "SocialNetworkingApplication",
-      "operatingSystem": ["iOS", "Android"],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Dadadu Team",
-        "url": "https://brosisus.com"
-      },
-      "featureList": [
-        "20-second video sharing",
-        "Proximity-based matching (Love, Business, Entertainment)",
-        "Gamified reward system with Diamonds and Badges",
-        "Ephemeral messaging with unlock features",
-        "Referral system",
-        "AI-powered content recommendations"
-      ]
-    }
-    </script>
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://brosisus.com">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
-          rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0F051A; /* Dark purple background */
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #C651CD, #6C82E3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .feature-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .privacy-policy-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dadadu - Connect, Share, Play</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #0F051A; /* Dark purple background */
+}
+.gradient-text {
+background: linear-gradient(90deg, #C651CD, #6C823; /* typo? keep user's value */);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.feature-card {
+background-color: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+.privacy-policy-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease-in-out;
+}
+</style>
 </head>
 <body class="text-gray-200">
-    <!-- WhatsApp Call-to-Action Section -->
+<!-- WhatsApp Call-to-Action Section -->
 <div class="text-center mt-10">
-    <!-- Arrow + Message -->
-    <div class="flex items-center justify-center gap-2 mb-3 animate-bounce">
-        <!-- Arrow pointing down -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-        <!-- Message -->
-        <span class="text-white font-semibold">Click here to join WhatsApp group – don't miss out 🚀</span>
-    </div>
+<!-- Arrow + Message -->
+<div class="flex items-center justify-center gap-2 mb-3 animate-bounce">
+<!-- Arrow pointing down -->
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+<!-- Message -->
+<span class="text-white font-semibold">Click here to join WhatsApp group – don’t miss out 🚀</span>
+</div>
 
-    <!-- WhatsApp Button -->
-    <a href="https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3"
-       class="inline-block bg-green-500 text-white font-bold py-4 px-10 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105 text-xl">
-        💬 Join WhatsApp Group
-    </a>
+<!-- WhatsApp Button (ajouts: id, target, rel) -->
+<a id="whatsappBtn"
+href="https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3"
+target="_blank" rel="noopener noreferrer"
+class="bg-green-500 text-white font-bold py-4 px-10 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105 text-xl">
+💬 Join WhatsApp Group
+</a>
 </div>
 <!-- Header Section -->
 <header class="relative overflow-hidden">
-    <div class="absolute inset-0">
-        <!-- Photo by Venti Views on Unsplash -->
-        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2070&auto=format&fit=crop"
-             onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/1a202c/ffffff?text=Social+Connections';"
-             alt="Group of friends enjoying a social event"
-             class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0F051A] via-[#0F051A]/80 to-transparent"></div>
-    </div>
-    <div class="relative z-10 container mx-auto px-6 py-24 md:py-32 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
-            Welcome to <span class="gradient-text">Dadadu</span>
-        </h1>
-        <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
-            The next-gen mobile social network app where you share 20-second videos and connect through Love, Business, or Entertainment modes. Earn Diamonds, unlock badges (Leaf 🍃, ThreeLeaf ☘️, FiveLeaf 🎀, Dadalord 👑), and match with users nearby. Built with Flutter, Supabase, and AI-powered recommendations for the ultimate social experience.
-        </p>
-        <div class="mt-8 flex justify-center gap-4">
-            <a href="#features"
-               class="bg-white/10 text-white font-semibold py-3 px-8 rounded-full hover:bg-white/20 transition-colors">Learn
-                More</a>
-        </div>
-    </div>
+<div class="absolute inset-0">
+<!-- Photo by Venti Views on Unsplash -->
+<img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2070&auto=format&fit=crop"
+onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/1a202c/ffffff?text=Social+Connections';"
+alt="Group of friends enjoying a social event"
+class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F051A] via-[#0F051A]/80 to-transparent"></div>
+</div>
+<div class="relative z-10 container mx-auto px-6 py-24 md:py-32 text-center">
+<h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
+Welcome to <span class="gradient-text">Dadadu</span>
+</h1>
+<p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
+The next-gen social app connecting you through entertainment, emotions, and real-life
+goals.
+</p>
+<div class="mt-8 flex justify-center gap-4">
+<a href="#"
+class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-indigo-500 transition-colors">Download
+App</a>
+<a href="#features"
+class="bg-white/10 text-white font-semibold py-3 px-8 rounded-full hover:bg-white/20 transition-colors">Learn
+More</a>
+</div>
+</div>
 </header>
 
 <!-- Main Content -->
 <main class="container mx-auto px-6 py-16" id="features">
 
-    <!-- Three Pillars Section -->
-    <section class="text-center mb-20">
-        <h2 class="text-3xl font-bold text-white mb-4">More Than a Social Network</h2>
-        <p class="max-w-3xl mx-auto text-gray-400 mb-12">Dadadu is a revolutionary short-form video social network app, similar to TikTok but with unique proximity-based matching. Connect with users within 1km radius through three distinct modes: Love ❤️, Business 💼, and Entertainment 🎭. Built on Flutter with Supabase backend, featuring gamified rewards, ephemeral messaging, and AI-powered recommendations.</p>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Pillar 1 -->
-            <div class="feature-card p-8 rounded-2xl">
-                <div class="text-4xl mb-4">🎬</div>
-                <h3 class="text-xl font-bold text-white mb-2">Short Video Feed</h3>
-                <p class="text-gray-400">Share your world in immersive 20-second vertical videos. Swipe-based feed with likes, comments, and follows. Videos stored in Wasabi and delivered via Bunny CDN for lightning-fast global streaming.</p>
-            </div>
-            <!-- Pillar 2 -->
-            <div class="feature-card p-8 rounded-2xl">
-                <div class="text-4xl mb-4">💞</div>
-                <h3 class="text-xl font-bold text-white mb-2">Proximity Matching</h3>
-                <p class="text-gray-400">Connect with users within 1km radius in Love ❤️, Business 💼, or Entertainment 🎭 modes. Unlock infinite distance by inviting 2 friends who successfully register through your referral link.</p>
-            </div>
-            <!-- Pillar 3 -->
-            <div class="feature-card p-8 rounded-2xl">
-                <div class="text-4xl mb-4">🏆</div>
-                <h3 class="text-xl font-bold text-white mb-2">Gamified Diamond System</h3>
-                <p class="text-gray-400">Earn Diamonds through engagement and referrals. Unlock badges from Leaf 🍃 (10k diamonds) to Dadalord 👑 (10M+). Use diamonds for visibility boosts and trending features.</p>
-            </div>
-        </div>
-    </section>
+<!-- Three Pillars Section -->
+<section class="text-center mb-20">
+<h2 class="text-3xl font-bold text-white mb-4">More Than a Social Network</h2>
+<p class="max-w-3xl mx-auto text-gray-400 mb-12">Dadadu is built on three pillars that
+redefine social interaction.</p>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="feature-card p-8 rounded-2xl">
+<div class="text-4xl mb-4">🎬</div>
+<h3 class="text-xl font-bold text-white mb-2">Short Videos</h3>
+<p class="text-gray-400">Share your world in immersive 20-second clips.</p>
+</div>
+<!-- Pillar 2 -->
+<div class="feature-card p-8 rounded-2xl">
+<div class="text-4xl mb-4">💞</div>
+<h3 class="text-xl font-bold text-white mb-2">Smart Matching</h3>
+<p class="text-gray-400">Connect with people based on proximity, language, and
+intent.</p>
+</div>
+<!-- Pillar 3 -->
+<div class="feature-card p-8 rounded-2xl">
+<div class="text-4xl mb-4">🏆</div>
+<h3 class="text-xl font-bold text-white mb-2">Gamified Rewards</h3>
+<p class="text-gray-400">Grow your status and earn virtual rewards through
+interaction.</p>
+</div>
+</div>
+</section>
 
-    <!-- App Features Section -->
-    <section class="text-center mb-20">
-        <h2 class="text-3xl font-bold gradient-text mb-8">Revolutionary Social Network Features</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="feature-card p-6 rounded-2xl">
-                <div class="text-3xl mb-4">📱</div>
-                <h3 class="text-lg font-bold text-white mb-2">Cross-Platform App</h3>
-                <p class="text-gray-400">Built with Flutter for iOS and Android. Currently in Google Play Store review, Apple Store ready.</p>
-            </div>
-            <div class="feature-card p-6 rounded-2xl">
-                <div class="text-3xl mb-4">💬</div>
-                <h3 class="text-lg font-bold text-white mb-2">Ephemeral Chat</h3>
-                <p class="text-gray-400">Messages disappear after 24 hours by default. Make them permanent by inviting 2 successful referrals.</p>
-            </div>
-            <div class="feature-card p-6 rounded-2xl">
-                <div class="text-3xl mb-4">🎯</div>
-                <h3 class="text-lg font-bold text-white mb-2">AI-Powered Recommendations</h3>
-                <p class="text-gray-400">Smart content filtering and video recommendations using advanced AI integration (Groq, OpenAI, Gemini).</p>
-            </div>
-            <div class="feature-card p-6 rounded-2xl">
-                <div class="text-3xl mb-4">🔗</div>
-                <h3 class="text-lg font-bold text-white mb-2">Referral Rewards</h3>
-                <p class="text-gray-400">Earn 100 Diamonds for each successful referral. Share your personal link and grow the community.</p>
-            </div>
-            <div class="feature-card p-6 rounded-2xl">
-                <div class="text-3xl mb-4">🎭</div>
-                <h3 class="text-lg font-bold text-white mb-2">Mood System</h3>
-                <p class="text-gray-400">Express yourself with mood indicators: Happy ❤️, Sad 😢, Excited 🤩. Displayed on your profile.</p>
-            </div>
-            <div class="feature-card p-6 rounded-2xl">
-                <div class="text-3xl mb-4">⚡</div>
-                <h3 class="text-lg font-bold text-white mb-2">High Performance</h3>
-                <p class="text-gray-400">Supabase PostgreSQL backend with Bunny CDN for global video delivery. Optimized for 1M+ users.</p>
-            </div>
-        </div>
-    </section>
-    <div class="space-y-20">
-        <!-- Share & Discover -->
-        <section class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold gradient-text mb-4">Share & Discover Short Videos</h2>
-                <p class="text-gray-400 mb-6">Create and share 20-second vertical videos in our "Now" feed, similar to TikTok but with unique social matching features. Customize posts with titles and thumbnails, watch your visibility grow with engagement, and earn "Diamonds" from viewers. Join conversations through public comments and build your following in our gamified social network.</p>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center"><span
-                            class="bg-indigo-500 rounded-full w-2 h-2 mr-3"></span>Auto-looping
-                        immersive feed
-                    </li>
-                    <li class="flex items-center"><span
-                            class="bg-indigo-500 rounded-full w-2 h-2 mr-3"></span>Earn Diamonds
-                        based on popularity
-                    </li>
-                    <li class="flex items-center"><span
-                            class="bg-indigo-500 rounded-full w-2 h-2 mr-3"></span>Visibility boosts
-                        for engaging content
-                    </li>
-                </ul>
-            </div>
-            <div class="flex justify-center">
-                <img src="https://placehold.co/400x600/1a202c/ffffff?text=Video+Feed"
-                     alt="App screenshot showing video feed" class="rounded-2xl shadow-2xl">
-            </div>
-        </section>
+<!-- Detailed Features Section -->
+<div class="space-y-20">
+<!-- Share & Discover -->
+<section class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold gradient-text mb-4">Share & Discover Short Videos</h2>
+<p class="text-gray-400 mb-6">Post 20-second vertical videos to the "Now" feed.
+Customize your posts with titles and thumbnails, and watch as your visibility
+grows with engagement. Earn "Diamonds" from viewers and join the conversation in
+public comments.</p>
+<ul class="space-y-3 text-gray-300">
+<li class="flex items-center"><span
+class="bg-indigo-500 rounded-full w-2 h-2 mr-3"></span>Auto-looping
+immersive feed
+</li>
+<li class="flex items-center"><span
+class="bg-indigo-500 rounded-full w-2 h-2 mr-3"></span>Earn Diamonds
+based on popularity
+</li>
+<li class="flex items-center"><span
+class="bg-indigo-500 rounded-full w-2 h-2 mr-3"></span>Visibility boosts
+for engaging content
+</li>
+</ul>
+</div>
+<div class="flex justify-center">
+<img src="https://placehold.co/400x600/1a202c/ffffff?text=Video+Feed"
+alt="App screenshot showing video feed" class="rounded-2xl shadow-2xl">
+</div>
+</section>
 
-        <!-- Smart Matching -->
-        <section class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1 flex justify-center">
-                <img src="https://placehold.co/400x600/1a202c/ffffff?text=Matching+UI"
-                     alt="App screenshot showing matching interface" class="rounded-2xl shadow-2xl">
-            </div>
-            <div class="order-1 md:order-2">
-                <h2 class="text-3xl font-bold gradient-text mb-4">The Proximity Matching System</h2>
-                <p class="text-gray-400 mb-6">Discover meaningful connections through our revolutionary three-mode matching system. Connect with people within 1 kilometer who share your intentions - whether seeking Love ❤️, Business 💼 opportunities, or Entertainment 🎭. Our unique proximity-based algorithm ensures real-world relevance. Unlock unlimited distance matching by successfully referring 2 new users to expand your network globally.</p>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center"><span
-                            class="bg-purple-500 rounded-full w-2 h-2 mr-3"></span>Proximity matching within 1km radius
-                    </li>
-                    <li class="flex items-center"><span
-                            class="bg-purple-500 rounded-full w-2 h-2 mr-3"></span>Three connection modes: Love, Business, Entertainment
-                    </li>
-                    <li class="flex items-center"><span
-                            class="bg-purple-500 rounded-full w-2 h-2 mr-3"></span>Swipeable profiles with chat integration
-                    </li>
-                </ul>
-            </div>
-        </section>
+<!-- Smart Matching -->
+<section class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 flex justify-center">
+<img src="https://placehold.co/400x600/1a202c/ffffff?text=Matching+UI"
+alt="App screenshot showing matching interface" class="rounded-2xl shadow-2xl">
+</div>
+<div class="order-1 md:order-2">
+<h2 class="text-3xl font-bold gradient-text mb-4">The Smart Matching System</h2>
+<p class="text-gray-400 mb-6">Find meaningful connections with our unique matching
+criteria. We connect you with people who are not just nearby, but who also share
+your language and intentions—whether you're looking for love, business, or just
+entertainment.</p>
+<ul class="space-y-3 text-gray-300">
+<li class="flex items-center"><span
+class="bg-purple-500 rounded-full w-2 h-2 mr-3"></span>Hyper-local
+matching (≤50 meters)
+</li>
+<li class="flex items-center"><span
+class="bg-purple-500 rounded-full w-2 h-2 mr-3"></span>Filter by intent:
+Love, Business, or Fun
+</li>
+<li class="flex items-center"><span
+class="bg-purple-500 rounded-full w-2 h-2 mr-3"></span>Swipeable ribbon
+of compatible profiles
+</li>
+</ul>
+</div>
+</section>
 
-        <!-- Dadarank & Badges -->
-        <section class="text-center">
-            <h2 class="text-3xl font-bold gradient-text mb-4">Dadarank & Badges</h2>
-            <p class="max-w-3xl mx-auto text-gray-400 mb-12">Build your reputation and climb the
-                ranks in our gamified system. The more you engage, the more valuable your profile
-                becomes.</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="feature-card p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-2">🍃</div>
-                    <h3 class="font-bold text-white">Leaf</h3>
-                    <p class="text-sm text-gray-400">&lt;10k Diamonds</p>
-                </div>
-                <div class="feature-card p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-2">☘️</div>
-                    <h3 class="font-bold text-white">ThreeLeaf</h3>
-                    <p class="text-sm text-gray-400">10k–999k</p>
-                </div>
-                <div class="feature-card p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-2">🎀</div>
-                    <h3 class="font-bold text-white">FiveLeaf</h3>
-                    <p class="text-sm text-gray-400">1M–9.9M</p>
-                </div>
-                <div class="feature-card p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-2">👑</div>
-                    <h3 class="font-bold text-white">Dadalord</h3>
-                    <p class="text-sm text-gray-400">10M+</p>
-                </div>
-            </div>
-            <p class="mt-8 text-indigo-400 font-semibold">Future Feature: Sell and trade your badges
-                in the Marketplace!</p>
-        </section>
-    </div>
+<!-- Dadarank & Badges -->
+<section class="text-center">
+<h2 class="text-3xl font-bold gradient-text mb-4">Dadarank & Badges</h2>
+<p class="max-w-3xl mx-auto text-gray-400 mb-12">Build your reputation and climb the
+ranks in our gamified system. The more you engage, the more valuable your profile
+becomes.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="feature-card p-6 rounded-xl text-center">
+<div class="text-3xl mb-2">🍃</div>
+<h3 class="font-bold text-white">Leaf</h3>
+<p class="text-sm text-gray-400">&lt;10k Diamonds</p>
+</div>
+<div class="feature-card p-6 rounded-xl text-center">
+<div class="text-3xl mb-2">☘️</div>
+<h3 class="font-bold text-white">ThreeLeaf</h3>
+<p class="text-sm text-gray-400">10k–999k</p>
+</div>
+<div class="feature-card p-6 rounded-xl text-center">
+<div class="text-3xl mb-2">🎀</div>
+<h3 class="font-bold text-white">FiveLeaf</h3>
+<p class="text-sm text-gray-400">1M–9.9M</p>
+</div>
+<div class="feature-card p-6 rounded-xl text-center">
+<div class="text-3xl mb-2">👑</div>
+<h3 class="font-bold text-white">Dadalord</h3>
+<p class="text-sm text-gray-400">10M+</p>
+</div>
+</div>
+<p class="mt-8 text-indigo-400 font-semibold">Future Feature: Sell and trade your badges
+in the Marketplace!</p>
+</section>
+</div>
 
-    <!-- Privacy Policy Section -->
-    <section class="mt-20 max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-white text-center mb-8">Your Privacy Matters</h2>
-        <div class="bg-white/5 rounded-2xl border border-white/10">
-            <button id="privacy-toggle"
-                    class="w-full flex justify-between items-center p-6 text-left">
-                <h3 class="text-xl font-bold text-white">Privacy Policy Summary</h3>
-                <svg id="privacy-arrow" class="w-6 h-6 text-white transform transition-transform"
-                     fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <div id="privacy-content" class="privacy-policy-content px-6">
-                <div class="prose prose-invert max-w-none text-gray-300 pb-6 space-y-4">
-                    <p>Last updated: July 29, 2025</p>
-                    <p>Dadadu ("us", "we", or "our") operates the Dadadu mobile application (the
-                        "Service"). This page informs you of our policies regarding the collection,
-                        use, and disclosure of personal data when you use our Service.</p>
+<!-- Privacy Policy Section -->
+<section class="mt-20 max-w-4xl mx-auto">
+<h2 class="text-3xl font-bold text-white text-center mb-8">Your Privacy Matters</h2>
+<div class="bg-white/5 rounded-2xl border border-white/10">
+<button id="privacy-toggle"
+class="w-full flex justify-between items-center p-6 text-left">
+<h3 class="text-xl font-bold text-white">Privacy Policy Summary</h3>
+<svg id="privacy-arrow" class="w-6 h-6 text-white transform transition-transform"
+fill="none" stroke="currentColor" viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="M19 9l-7 7-7-7"></path>
+</svg>
+</button>
+<div id="privacy-content" class="privacy-policy-content px-6">
+<div class="prose prose-invert max-w-none text-gray-300 pb-6 space-y-4">
+<p>Last updated: July 29, 2025</p>
+<p>Dadadu ("us", "we", or "our") operates the Dadadu mobile application (the
+"Service"). This page informs you of our policies regarding the collection,
+use, and disclosure of personal data when you use our Service.</p>
 
-                    <h4>Information Collection and Use</h4>
-                    <p>We collect several different types of information for various purposes to
-                        provide and improve our Service to you.</p>
-                    <ul>
-                        <li><strong>Personal Data:</strong> While using our Service, we may ask you
-                            to provide us with certain personally identifiable information,
-                            including your email address, name, and profile picture.
-                        </li>
-                        <li><strong>Camera Access:</strong> Our Service requires access to your
-                            device's camera to allow you to record and upload 20-second videos. We
-                            do not access your camera or media without your explicit action.
-                        </li>
-                        <li><strong>Location Data:</strong> We use your device's location to enable
-                            our Smart Matching feature, which connects you with users within a
-                            50-meter radius. You can control location services through your device's
-                            settings.
-                        </li>
-                        <li><strong>Usage Data:</strong> We may also collect information on how the
-                            Service is accessed and used. This Usage Data may include information
-                            such as your device's IP address, browser type, and other diagnostic
-                            data.
-                        </li>
-                    </ul>
+<h4>Information Collection and Use</h4>
+<p>We collect several different types of information for various purposes to
+provide and improve our Service to you.</p>
+<ul>
+<li><strong>Personal Data:</strong> While using our Service, we may ask you
+to provide us with certain personally identifiable information,
+including your email address, name, and profile picture.
+</li>
+<li><strong>Camera Access:</strong> Our Service requires access to your
+device's camera to allow you to record and upload 20-second videos. We
+do not access your camera or media without your explicit action.
+</li>
+<li><strong>Location Data:</strong> We use your device's location to enable
+our Smart Matching feature, which connects you with users within a
+50-meter radius. You can control location services through your device's
+settings.
+</li>
+<li><strong>Usage Data:</strong> We may also collect information on how the
+Service is accessed and used. This Usage Data may include information
+such as your device's IP address, browser type, and other diagnostic
+data.
+</li>
+</ul>
 
-                    <h4>Data Security</h4>
-                    <p>The security of your data is important to us, but remember that no method of
-                        transmission over the Internet or method of electronic storage is 100%
-                        secure. We use commercially acceptable means to protect your Personal Data,
-                        such as encryption and secure server infrastructure (Firebase).</p>
+<h4>Data Security</h4>
+<p>The security of your data is important to us, but remember that no method of
+transmission over the Internet or method of electronic storage is 100%
+secure. We use commercially acceptable means to protect your Personal Data,
+such as encryption and secure server infrastructure (Firebase).</p>
 
-                    <h4>Your Rights</h4>
-                    <p>You have the right to access, update, or delete the information we have on
-                        you. You can do this at any time through your profile and settings pages
-                        within the app.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<h4>Your Rights</h4>
+<p>You have the right to access, update, or delete the information we have on
+you. You can do this at any time through your profile and settings pages
+within the app.</p>
+</div>
+</div>
+</div>
+</section>
 
 </main>
 
 <!-- Footer -->
 <footer class="bg-white/5 border-t border-white/10 mt-16">
-    <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-        <p>&copy; 2025 Dadadu. All Rights Reserved.</p>
-        <div class="flex justify-center gap-6 mt-4">
-            <a href="#" class="hover:text-white">Twitter</a>
-            <a href="#" class="hover:text-white">Instagram</a>
-            <a href="#" class="hover:text-white">Contact</a>
-        </div>
-    </div>
+<div class="container mx-auto px-6 py-8 text-center text-gray-400">
+<p>&copy; 2025 Dadadu. All Rights Reserved.</p>
+<div class="flex justify-center gap-6 mt-4">
+<a href="#" class="hover:text-white">Twitter</a>
+<a href="#" class="hover:text-white">Instagram</a>
+<a href="#" class="hover:text-white">Contact</a>
+</div>
+</div>
 </footer>
 
 <script>
-    const toggleButton = document.getElementById('privacy-toggle');
-    const content = document.getElementById('privacy-content');
-    const arrow = document.getElementById('privacy-arrow');
+const toggleButton = document.getElementById('privacy-toggle');
+const content = document.getElementById('privacy-content');
+const arrow = document.getElementById('privacy-arrow');
 
-    toggleButton.addEventListener('click', () => {
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            arrow.style.transform = 'rotate(0deg)';
-        } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            arrow.style.transform = 'rotate(180deg)';
-        }
-    });
+toggleButton.addEventListener('click', () => {
+if (content.style.maxHeight) {
+content.style.maxHeight = null;
+arrow.style.transform = 'rotate(0deg)';
+} else {
+content.style.maxHeight = content.scrollHeight + 'px';
+arrow.style.transform = 'rotate(180deg)';
+}
+});
+</script>
+
+<!-- Script anti-blocage TikTok : ajoute seulement l’ouverture externe -->
+<script>
+(function() {
+const btn = document.getElementById('whatsappBtn');
+if (!btn) return;
+
+btn.addEventListener('click', function(e) {
+const url = this.href;
+const ua = navigator.userAgent || '';
+const inTikTok = /TikTok|TTWebView|Musical\.ly|Bytedance/i.test(ua);
+
+if (!inTikTok) {
+// Laisser le comportement normal (target=_blank ouvre le navigateur)
+return;
+}
+
+// Bloque le click par défaut dans TikTok
+e.preventDefault();
+
+const isAndroid = /Android/i.test(ua);
+
+if (isAndroid) {
+// Android : utilise intent:// pour sortir du webview et ouvrir WhatsApp
+const intentUrl = 'intent://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3#Intent;scheme=https;package=com.whatsapp;end';
+window.location.href = intentUrl;
+
+// Secours : recharge l’URL https si l’intent est bloqué
+setTimeout(function(){ window.location.href = url; }, 1200);
+} else {
+// iOS (TikTok) : tente nouvelle fenêtre puis fallback
+window.open(url, '_blank', 'noopener,noreferrer');
+setTimeout(function(){ window.location.href = url; }, 800);
+}
+});
+})();
 </script>
 
 </body>
