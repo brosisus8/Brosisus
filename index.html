@@ -87,13 +87,13 @@
     <!-- Fallback instruction text (initially hidden) -->
     <div id="fallback-instructions" class="mt-4 p-4 bg-yellow-600/20 border border-yellow-500/30 rounded-lg max-w-md mx-auto" style="display: none;">
         <p class="text-yellow-200 text-sm">
-            <strong>📱 Pour rejoindre le groupe :</strong><br>
-            1. Copiez ce lien : <span id="whatsapp-link" class="font-mono bg-gray-800 px-2 py-1 rounded">https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3</span><br>
-            2. Ouvrez WhatsApp<br>
-            3. Collez le lien dans un chat ou votre navigateur
+            <strong>📱 To join the group:</strong><br>
+            1. Copy this link: <span id="whatsapp-link" class="font-mono bg-gray-800 px-2 py-1 rounded">https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3</span><br>
+            2. Open WhatsApp<br>
+            3. Paste the link into a chat or your browser
         </p>
         <button id="copy-link-btn" class="mt-2 bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700">
-            📋 Copier le lien
+            📋 Copy Link
         </button>
     </div>
 </div>
@@ -101,41 +101,41 @@
 <!-- Modal for instructions -->
 <div id="whatsapp-modal" class="modal">
     <div class="modal-content">
-        <h3 class="text-2xl font-bold text-white mb-4">🚀 Rejoignez notre groupe WhatsApp !</h3>
-        <p class="text-gray-300 mb-6">Choisissez votre méthode préférée :</p>
+        <h3 class="text-2xl font-bold text-white mb-4">🚀 Join our WhatsApp Group!</h3>
+        <p class="text-gray-300 mb-6">Choose your preferred method:</p>
         
         <div class="space-y-4">
             <!-- Method 1: Direct link (may work on some devices) -->
             <a href="https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3" 
                target="_blank"
                class="block bg-green-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-green-700 transition-colors">
-                🔗 Ouvrir directement WhatsApp
+                🔗 Open WhatsApp Directly
             </a>
             
             <!-- Method 2: Universal link -->
             <a href="whatsapp://chat?code=JPbFA965fkZ7xSWoM5t1N3" 
                class="block bg-green-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-green-600 transition-colors">
-                📱 Ouvrir avec l'app WhatsApp
+                📱 Open with WhatsApp App
             </a>
             
             <!-- Method 3: Copy link -->
             <button id="modal-copy-btn" 
                     class="block w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors">
-                📋 Copier le lien du groupe
+                📋 Copy Group Link
             </button>
             
             <!-- Method 4: Manual instructions -->
             <div class="bg-gray-800/50 p-4 rounded-lg text-left">
-                <p class="text-gray-300 text-sm mb-2"><strong>Instructions manuelles :</strong></p>
+                <p class="text-gray-300 text-sm mb-2"><strong>Manual Instructions:</strong></p>
                 <p class="text-gray-400 text-xs">
-                    1. Copiez : <span class="font-mono bg-gray-700 px-1 rounded">https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3</span><br>
-                    2. Ouvrez WhatsApp<br>
-                    3. Collez dans un chat ou votre navigateur
+                    1. Copy: <span class="font-mono bg-gray-700 px-1 rounded">https://chat.whatsapp.com/JPbFA965fkZ7xSWoM5t1N3</span><br>
+                    2. Open WhatsApp<br>
+                    3. Paste it in a chat or your browser
                 </p>
             </div>
         </div>
         
-        <button id="close-modal" class="mt-6 text-gray-400 hover:text-white">✕ Fermer</button>
+        <button id="close-modal" class="mt-6 text-gray-400 hover:text-white">✕ Close</button>
     </div>
 </div>
 
@@ -158,9 +158,6 @@
             goals.
         </p>
         <div class="mt-8 flex justify-center gap-4">
-            <a href="#"
-               class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-indigo-500 transition-colors">Download
-                App</a>
             <a href="#features"
                class="bg-white/10 text-white font-semibold py-3 px-8 rounded-full hover:bg-white/20 transition-colors">Learn
                 More</a>
@@ -404,7 +401,7 @@
     function copyToClipboard(text) {
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(text).then(() => {
-                showToast('Lien copié ! Collez-le dans WhatsApp 📋✅');
+                showToast('Link copied! Paste it in WhatsApp 📋✅');
             }).catch(() => {
                 fallbackCopy(text);
             });
@@ -425,9 +422,9 @@
         
         try {
             document.execCommand('copy');
-            showToast('Lien copié ! Collez-le dans WhatsApp 📋✅');
+            showToast('Link copied! Paste it in WhatsApp 📋✅');
         } catch (err) {
-            showToast('Impossible de copier automatiquement. Copiez manuellement le lien.');
+            showToast('Unable to copy automatically. Please copy the link manually.');
         }
         
         document.body.removeChild(textArea);
