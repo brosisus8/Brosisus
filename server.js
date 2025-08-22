@@ -20,6 +20,10 @@ cloudinary.config({
 
 const multer = require('multer');
 
+app.get('/privacy-policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'privacy-policy.html'));
+});
+
 // Configure multer for file uploads
 const storage = multer.diskStorage({
     filename: (req, file, cb) => {
